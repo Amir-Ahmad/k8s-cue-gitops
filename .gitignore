@@ -1,0 +1,11 @@
+# temporary decrypted sops files from vscode sops plugin
+.decrypted~*
+
+# temporary decrypted sops files
+*.sops.unenc.cue
+
+# temporary charts directory from kustomize
+**/charts/
+
+# temporary cue generated yaml files for kustomize
+*.cue.yaml

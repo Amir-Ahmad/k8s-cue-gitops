@@ -1,0 +1,4 @@
+creation_rules:
+  - path_regex: cluster/.*\.sops\.cue
+    age: >-
+      age1zck28fqqachu4j8wxtntkeznc5lth3zfyhumwa30085tt62pxsjs3xt0gl

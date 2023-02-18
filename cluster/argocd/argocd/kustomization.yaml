@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argocd
+metadata:
+  name: argocd
+
+resources:
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.4.12/manifests/install.yaml
+
+patchesStrategicMerge:
+  - argocd-repo-server.cue.yaml
+  - argocd-cmd-params-cm.cue.yaml
+  - argocd-cm.cue.yaml
+  - argocd-rbac-cm.cue.yaml

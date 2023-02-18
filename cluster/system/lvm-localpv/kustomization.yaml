@@ -1,0 +1,13 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: lvm-localpv
+
+helmCharts:
+- name: lvm-localpv
+  releaseName: lvm-localpv
+  namespace:  lvm-localpv
+  version: 1.0.0
+  repo: https://openebs.github.io/lvm-localpv
+  valuesFile: values.cue.yaml
+  includeCRDs: true
