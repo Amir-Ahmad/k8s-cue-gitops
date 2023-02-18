@@ -31,7 +31,7 @@ cluster
 ├── cue.mod               # generated kubernetes manifests for validation
 ├── go.mod                # used to generated cue.mod
 ├── go.sum                # used to generated cue.mod
-├── main.cue
+├── main.cue              # Declare list of objects and abstractions, unify
 ├── main_tool.cue         # cue tool to output yaml (cue dump)
 └── system                # Tooling needed for the cluster (e.g. ingress controller, cert manager)
 ```
@@ -82,6 +82,9 @@ Argocd will take over from there and deploy all the apps defined in cluster/argo
 
 [Argocd cue plugin definition](cluster/argocd/argocd/argocd-config-plugins.cue)
 
+[App example](cluster/apps/jellyfin/app.cue)
+
+[Text templating in cue to generate toml for glauth](cluster/system/glauth/user_def.cue) - This shows how flexible cue is.
 
 
 ## to do:
